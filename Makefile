@@ -95,6 +95,7 @@ Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sai_ex.c \
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c \
 Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c \
+Src/usb_device.c
 
 # ASM sources
 ASM_SOURCES =  \
