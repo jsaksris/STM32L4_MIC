@@ -50,6 +50,7 @@
 #include "main.h"
 #include "stm32l4xx_hal.h"
 #include "usb_device.h"
+#include "stm32l476g_discovery_audio.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -133,6 +134,7 @@ int main(void)
   MX_USART2_UART_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
+  BSP_AUDIO_IN_Init(BSP_AUDIO_FREQUENCY_22K,12,1);
 
   /* USER CODE END 2 */
 
