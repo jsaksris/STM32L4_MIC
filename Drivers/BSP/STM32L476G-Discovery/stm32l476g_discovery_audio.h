@@ -53,7 +53,7 @@
 /* Include audio component Driver */
 #include "../Components/cs43l22/cs43l22.h"
 #include "stm32l476g_discovery.h"
-
+#include "stm32l4xx_hal_dfsdm.h"
 /** @addtogroup BSP
   * @{
   */ 

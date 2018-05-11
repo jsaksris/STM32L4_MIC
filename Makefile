@@ -39,11 +39,14 @@ Application/User \
 Application/User/Src/usbd_conf.c \
 Drivers/STM32L4xx_HAL_Driver \
 Drivers/CMSIS \
+Drivers/BSP \
 Application \
 Application/User/Src/usbd_audio_if.c \
 Application/User/Src/usb_device.c \
 Application/User/Src \
 Middlewares/USB_Device_Library \
+Application/User/Src/stm32l476g_discovery_audio.c \
+Application/User/Src/stm32l4xx_hal_dfsdm.c \
 Application/User/Src/stm32l4xx_it.c
 
 # firmware library path
@@ -61,7 +64,6 @@ Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c \
-Src/stm32l4xx_hal_msp.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sai.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.c \
 Src/usbd_audio_if.c \
@@ -95,7 +97,11 @@ Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sai_ex.c \
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c \
 Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c \
-Src/usb_device.c
+Drivers/BSP/STM32L476G-Discovery/stm32l476g_discovery.c \
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.c \
+Src/usb_device.c \
+Drivers/BSP/STM32L476G-Discovery/stm32l476g_discovery_audio.c \
+#Src/stm32l4xx_hal_msp.c \
 
 # ASM sources
 ASM_SOURCES =  \
@@ -157,7 +163,8 @@ C_INCLUDES =  \
 -IMiddlewares/ST/STM32_USB_Device_Library/Core/Inc \
 -IMiddlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Inc \
 -IDrivers/CMSIS/Device/ST/STM32L4xx/Include \
--IDrivers/CMSIS/Include
+-IDrivers/CMSIS/Include \
+-IDrivers/BSP/STM32L476G-Discovery
 
 
 # compile gcc flags
