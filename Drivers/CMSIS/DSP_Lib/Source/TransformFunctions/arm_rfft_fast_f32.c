@@ -38,6 +38,8 @@
 * POSSIBILITY OF SUCH DAMAGE.
 * -------------------------------------------------------------------- */
 
+#define ARM_MATH_CM4
+#include "stm32l476xx.h"
 #include "arm_math.h"
 
 void stage_rfft_f32(

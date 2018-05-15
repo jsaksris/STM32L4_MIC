@@ -30,24 +30,25 @@ OPT = -Og
 #######################################
 # source path
 SOURCES_DIR =  \
-Application/User/Src/usbd_desc.c \
 Middlewares \
 Application/User/Src/stm32l4xx_hal_msp.c \
 Drivers \
 Application/User/Src/main.c \
 Application/User \
-Application/User/Src/usbd_conf.c \
 Drivers/STM32L4xx_HAL_Driver \
 Drivers/CMSIS \
 Drivers/BSP \
+Drivers/CMSIS/DSP_Lib/Source/TransformFunctions \
 Application \
-Application/User/Src/usbd_audio_if.c \
-Application/User/Src/usb_device.c \
 Application/User/Src \
 Middlewares/USB_Device_Library \
-Application/User/Src/stm32l476g_discovery_audio.c \
 Application/User/Src/stm32l4xx_hal_dfsdm.c \
 Application/User/Src/stm32l4xx_it.c
+#Application/User/Src/usbd_conf.c 
+#Application/User/Src/usbd_audio_if.c \
+Application/User/Src/usbd_desc.c \
+Application/User/Src/stm32l476g_discovery_audio.c \
+#Application/User/Src/usb_device.c 
 
 # firmware library path
 PERIFLIB_PATH = 
@@ -66,10 +67,7 @@ Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sai.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.c \
-Src/usbd_audio_if.c \
-Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c \
-Src/usbd_desc.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_qspi.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_lcd.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c \
@@ -77,41 +75,62 @@ Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c \
 Src/stm32l4xx_it.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c \
 Src/main.c \
+Src/dfsdm.c \
+Src/gpio.c \
+Src/dma.c \
+Src/usart.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c \
-/Src/system_stm32l4xx.c \
+Src/system_stm32l4xx.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c \
-Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c \
-Src/usbd_conf.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sai_ex.c \
-Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c \
-Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio.c \
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c \
 Drivers/BSP/STM32L476G-Discovery/stm32l476g_discovery.c \
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.c \
-Src/usb_device.c \
+Drivers/CMSIS/DSP_Lib/Source/FastMathFunctions/arm_cos_f32.c \
+Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_mult_f32.c \
+Drivers/CMSIS/DSP_Lib/Source/ComplexMathFunctions/arm_cmplx_mag_f32.c \
+Drivers/CMSIS/DSP_Lib/Source/BasicMathFunctions/arm_scale_f32.c \
+Drivers/CMSIS/DSP_Lib/Source/StatisticsFunctions/arm_max_f32.c \
+Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_f32.c \
+Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_q31.c \
+Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_cfft_radix8_f32.c \
+Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_rfft_fast_f32.c \
+Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_rfft_fast_init_f32.c \
+Drivers/CMSIS/DSP_Lib/Source/TransformFunctions/arm_bitreversal.c \
+Drivers/CMSIS/DSP_Lib/Source/CommonTables/arm_common_tables.c \
+Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c \
+Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c \
+
+#Src/usbd_audio_if.c 
+#Src/usb_device.c 
+#Src/usbd_conf.c \ 
+#Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \
 Drivers/BSP/STM32L476G-Discovery/stm32l476g_discovery_audio.c \
+#Src/usbd_desc.c \
 #Src/stm32l4xx_hal_msp.c \
 
 # ASM sources
 ASM_SOURCES =  \
-startup_stm32l476xx.s
+arm_bitreversal2.S \
+startup_stm32l476xx.s \
 
 
 ######################################
 # firmware library
 ######################################
-PERIFLIB_SOURCES = 
+PERIFLIB_SOURCES = \
+
 
 
 #######################################
@@ -128,7 +147,7 @@ HEX = $(CP) -O ihex
 BIN = $(CP) -O binary -S
  
 #######################################
-# CFLAGS
+# CFLAGS -DARM_MATH_CM4 -D__FPU_PRESENT
 #######################################
 # cpu
 CPU = -mcpu=cortex-m4
@@ -153,7 +172,8 @@ C_DEFS =  \
 
 
 # AS includes
-AS_INCLUDES = 
+AS_INCLUDES = \
+-IDrivers/CMSIS/DSP_Lib/Source/TransformFunctions
 
 # C includes
 C_INCLUDES =  \
@@ -164,6 +184,7 @@ C_INCLUDES =  \
 -IMiddlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Inc \
 -IDrivers/CMSIS/Device/ST/STM32L4xx/Include \
 -IDrivers/CMSIS/Include \
+-IDrivers/CMSIS/DSP_Lib/Source/TransformFunctions \
 -IDrivers/BSP/STM32L476G-Discovery
 
 
@@ -173,7 +194,7 @@ ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffuncti
 CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
 
 ifeq ($(DEBUG), 1)
-CFLAGS += -g -gdwarf-2
+CFLAGS += -D__USE_CMSIS -std=c99 -g -gdwarf-2
 endif
 
 
@@ -210,7 +231,7 @@ $(BUILD_DIR)/%.o: %.c Makefile | $(BUILD_DIR)
 	$(CC) -c $(CFLAGS) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
 
 $(BUILD_DIR)/%.o: %.s Makefile | $(BUILD_DIR)
-	$(AS) -c $(CFLAGS) $< -o $@
+	$(AS) -c $(ASFLAGS) $< -o $@
 
 $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile
 	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
